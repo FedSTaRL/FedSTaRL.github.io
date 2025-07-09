@@ -185,6 +185,7 @@ body {
 .results-row{
   margin-bottom: 15px;
   display: flex;  
+  flex-direction: row;
   overflow: auto;
 }
 
@@ -213,4 +214,11 @@ body {
 
 .light-grey-border-bottom{
   border-bottom: 1px solid rgb(215, 215, 215)
+}
+
+/* On screens smaller than 600px (phones), switch to column */
+@media (max-width: 600px) {
+  .results-row {
+    flex-direction: column;
+  }
 }
