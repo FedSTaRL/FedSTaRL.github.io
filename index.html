@@ -25,7 +25,554 @@
 </head>
 <body>
 
-<h1> This is my index web page! </h1>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Leveraging Federated Learning for Decentralized Semi-Supervised Task-Informed Representation Learning on Sequential Data</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://mforstenhaeusler.com">Maximilian Forstenhäusler</a><sup>1, 2</sup>,</span>
+            <span class="author-block">
+              <a href="">Christos Anagnostopoulos</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="">Shameen Parambath</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Daniel Külzer</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Natascha Weber</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>University of Glasgow,</span>
+              <span class="author-block"><sup>2</sup>BMW Group</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Poster</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a-->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser light-grey-bg">
+  <div class="container">
+    <div class="hero-body-teaser ">
+      <div class="hero-row">
+        <div class="hero-column">
+          <img src="./static/images/T=200-E=1-CrossDevice.png" class="hero-img" alt="Cross Device Results">
+        </div>
+        <div class="hero-column"> 
+            <img src="./static/images/T=200-E=1-CrossSilo.png" class="hero-img" alt="Cross Silo Results">
+        </div>
+      </div>
+      <!--video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video-->
+      <h2 class="subtitle has-text-centered">
+        Central validation accuracy versus communication rounds (T = 200).
+        <!--<span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.-->
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section light-grey-bg">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Over the past decade, advancements in machine learning, particularly large language models like OpenAI’s Chat-
+            GPT, have heightened public awareness about artificial intelligence. The growing awareness has led to increased expectations
+            for intelligent products that enhance user experience, often requiring the collection of substantial amounts of potentially
+            sensitive data. However, data protection legislation such as the EU AI Act [1] or GDPR [2] restricts the collection and storage of
+            sensitive user data in real-world applications, making it difficult for organizations to aggregate large datasets across users or
+            institutions, in addition to substantial transmission costs associated with storing the data in the first place. Federated Learning
+            offers a promising paradigm to address these issues by enabling decentralized learning via data minimization, thereby also re-
+            ducing communication overhead. To evaluate its effectiveness, we explore a real-world sequential classification task to learn the
+            intent of smart device users within confined areas of a vehicle. Utilizing an anonymized real-world dataset sourced from BMW’s
+            car fleet and employing a novel sequential modeling approach, STaRFormer [3], we analyze two federated learning architectures,
+            cross-device and cross-silo, and assess two federated aggregation algorithms for various baseline models. The results demonstrate
+            that STaRFormer outperforms baseline models in the cross-silo case and delivers competitive results in the cross-device case, 
+            highlighting its efficacy in decentralized sequential data modeling.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+<section class="section" id="Motivation">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Motivation</h2>
+    <p>
+      The motivation for this project is rooted in the pursuit of data-driven solutions, necessitated by the abundant amounts of data generated by modern vehicles, 
+      which can reach gigabytes per hour. Mandated by General Data Protection Regulation (GDPR) [2], the European Union Artificial Intelligence Act [1] and other legistlation 
+      the data collection is often contingent upon obtaining customer consent. Moreover, the financial implications related to data storage 
+      and transmission are considerable, posing additional challenges. In the use-case presented, data availability further complicates the landscape, as merely around 
+      30% of customers provide consent for the use of their data in developmental endeavors. This limitation prompts the need for strategies to effectively leverage 
+      potentially unavailable data. Additionally, the diversity in regulations across various countries adds layers of complexity to forming a cohesive data collection 
+      and storage strategy. These challenges collectively highlight the necessity for innovative approaches to enhance data utilization in vehicle technology development.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="TL;DR">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Technical TL;DR</h2>
+    <p>
+    This project shows that local contrastive learning can improve Transformer model 
+    performance in federated learning for sequential tasks, but requires sufficient local data 
+    and careful tuning to avoid overfitting. Future work will might explore methods to better 
+    balance global and local representation learning in distributed settings.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="Results">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Results</h2>
+    <h4 class="title" style="margin-bottom: 10px">Results (T=50)</h4>
+    <div class="results-row">
+      <div class="results-column-1-3">
+        <ul>
+          <li>Cross-Device setting presents a challenging task</li>
+          <ul>
+            <li>due to limited number of training samples</li>
+            <li>non-i.i.d. characteristics</li>
+          </ul>
+          <li>Lower performance metrics across all models (cross-device)</li>
+          <!--ul>Lower performance metrics across all models (cross-device):
+            <li>Significant impact on LSTM and STaRFormer (larger models).</li>
+            <li>STaRFormer performs well in cross-silo but on par in cross-device settings.</li>
+          </ul-->
+          <li>Proximal term in FedProx helps stabilize training, when client dataset sizes are larger</li>
+        </ul>
+      </div>
+      <div class="results-column-2-3">
+        <table class="results-table">
+          <tr class="light-grey-border-top" style="text-align: center;">
+            <th></th>
+            <th></th>
+            <th colspan="6" style="text-align: center;">Statistics</th>
+          </tr>
+          <tr class="light-grey-bg" style="text-align: center;">
+            <th>Setting</th>
+            <th>Evaluation Criterion</th>
+            <th class="light-grey-border-top">Accuracy</th>
+            <th class="light-grey-border-top">F<sub>0.5</sub>-Score</th>
+            <th class="light-grey-border-top">F<sub>1</sub>-Score</th>
+            <th class="light-grey-border-top">Precision</th>
+            <th class="light-grey-border-top">Recall</th>
+            <th class="light-grey-border-top">Avg. Rank (Accuracy)</th>
+          </tr>
+          <!-- Cross Device -->
+          <tr style="text-align: center;">
+            <td rowspan="8" style="text-align: center; vertical-align: middle;">Cross-Device</td>
+            <td style="text-align: left;">RNN</td>
+            <td>0.720</td>
+            <td>0.706</td>
+            <td>0.695</td>
+            <td>0.726</td>
+            <td>0.702</td>
+            <td>4.375</td>
+          </tr>
+          <tr class="light-grey-bg" style="text-align: center;">
+            <td style="text-align: left;">LSTM</td>
+            <td>0.701</td>
+            <td>0.624</td>
+            <td>0.631</td>
+            <td>0.624</td>
+            <td>0.664</td>
+            <td>3.375</td>
+          </tr>
+          <tr style="text-align: center;">      
+            <td style="text-align: left;">GRU</td>
+            <td>0.736</td>
+            <td>0.724</td>
+            <td><b>0.719</b></td>
+            <td>0.647</td>
+            <td><b>0.720</b></td>
+            <td><b>2.375</b></td>
+          </tr>
+          <tr class="light-grey-bg" style="text-align: center;">
+            <td style="text-align: left;">Transformer</td>
+            <td><b>0.743</b></td>
+            <td><b>0.729</b></td>
+            <td><b>0.717</b></td>
+            <td>0.743</td>
+            <td><b>0.718</b></td>
+            <td>2.500</td>
+          </tr>
+          <tr style="text-align: center;">
+            <td style="text-align: left;">STaRFormer</td>
+            <td>0.740</td>
+            <td>0.726</td>
+            <td>0.714</td>
+            <td>0.741</td>
+            <td>0.711</td>
+            <td>2.375</td>
+          </tr>
+          <tr class="light-grey-bg" style="text-align: center;">
+            <td style="text-align: left;">FedAvg vs FedProx</td>
+            <td>5 / 5</td>
+            <td>5 / 5</td>
+            <td>5 / 5</td>
+            <td>2 / 5</td>
+            <td>4 / 5</td>
+            <td>-</td>
+          </tr>
+          <tr style="text-align: center;">
+            <td style="text-align: left;">E=1</td>
+            <td>0.722</td>
+            <td>0.680</td>
+            <td>0.675</td>
+            <td>0.658</td>
+            <td>0.686</td>
+            <td>-</td>
+          </tr>
+          <tr class="light-grey-bg" style="text-align: center;">
+            <td style="text-align: left;">E=5</td>
+            <td><b>0.734</b></td>
+            <td><b>0.724</b></td>
+            <td><b>0.715</b></td>
+            <td><b>0.735</b></td>
+            <td><b>0.719</b></td>
+            <td>-</td>
+          </tr>
+          <!-- Cross Silo -->
+          <tr style="text-align: center;">
+            <td rowspan="8" style="text-align: center; vertical-align: middle;">Cross-Silo</td>
+            <td style="text-align: left;">RNN</td>
+            <td>0.746</td>
+            <td>0.737</td>
+            <td>0.736</td>
+            <td>0.741</td>
+            <td>0.740</td>
+            <td>4.250</td>
+          </tr>
+          <tr class="light-grey-bg" style="text-align: center;">
+            <td style="text-align: left;">LSTM</td>
+            <td>0.748</td>
+            <td>0.738</td>
+            <td>0.736</td>
+            <td>0.744</td>
+            <td>0.739</td>
+            <td>4.000</td>
+          </tr>
+          <tr style="text-align: center;">
+            <td style="text-align: left;">GRU</td>
+            <td>0.743</td>
+            <td>0.732</td>
+            <td><b>0.730</b></td>
+            <td>0.734</td>
+            <td><b>0.732</b></td>
+            <td>3.250</td>
+          </tr>
+          <tr class="light-grey-bg" style="text-align: center;">
+            <td style="text-align: left;">Transformer</td>
+            <td>0.758</td>
+            <td>0.746</td>
+            <td>0.741</td>
+            <td>0.751</td>
+            <td>0.743</td>
+            <td>3.250</td>
+          </tr>
+          <tr style="text-align: center;" style="text-align: center;">
+            <td style="text-align: left;">STaRFormer</td>
+            <td><b>0.770</b></td>
+            <td><b>0.758</b></td>
+            <td><b>0.754</b></td>
+            <td><b>0.762</b></td>
+            <td><b>0.752</b></td>
+            <td><b>1.250</b></td>
+          </tr>
+          <tr class="light-grey-bg" style="text-align: center;">
+            <td style="text-align: left;">FedAvg vs FedProx</td>
+            <td>2 / 5</td>
+            <td>2 / 5</td>
+            <td>2 / 5</td>
+            <td>2 / 5</td>
+            <td>2 / 5</td>
+            <td>-</td>
+          </tr>
+          <tr style="text-align: center;">
+            <td style="text-align: left;">E=1</td>
+            <td><b>0.754</b></td>
+            <td><b>0.743</b></td>
+            <td><b>0.741</b></td>
+            <td>0.745</td>
+            <td>0.741</td>
+            <td>-</td>
+          </tr>
+          <tr class="light-grey-bg light-grey-border-bottom" style="text-align: center;">
+            <td style="text-align: left;">E=5</td>
+            <td>0.752</td>
+            <td>0.752</td>
+            <td>0.738</td>
+            <td><b>0.748</b></td>
+            <td><b>0.741</b></td>
+            <td>-</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <h4 class="title" style="margin-bottom: 10px">Impact of distributed local contrastive learning.</h4>
+    <div class="results-row">
+      <div class="results-column-2-2">
+        Cross-Device: 
+        <ul>
+          <li>Restricts effectiveness of CL.</li>
+          <li>Excessive weight on CL loss --> noisy, misaligned representations.</li>
+        </ul>
+        Cross-Silo:
+        <ul>
+          <li>Fewer clients with larger, more variable datasets allow for meaningful positive pairings.</li>      
+          <li>Robust representations positively impact the global objective.</li>
+        </ul>
+      </div>
+      <div class="results-column-2-2">
+        <table class="results-table">
+          <tr class="light-grey-border-bottom" style="text-align: center;">
+            <th>Settings</th>
+            <th>Aggregation</th>
+            <th>&lambda;<sub>CL</sub></th>
+            <th>Accuracy</th>
+            <th>F<sub>0.5</sub>-Score</th>
+            <th>F<sub>1</sub>-Score</th>
+            <th>Precision</th>
+            <th>Recall</th>
+          </tr>
+          <tr class="light-grey-bg" style="text-align: center;">
+            <td rowspan="4" style="text-align: center; vertical-align: middle;"> Cross-Device</td>
+            <td rowspan="2" style="text-align: center; vertical-align: middle;"> FedAvg</td>
+            <td>0.1</td>
+            <td><b>0.743</b></td>
+            <td><b>0.723</b></td>
+            <td><b>0.722</b></td>
+            <td><b>0.735</b></td>
+            <td><b>0.718</b></td>
+          </tr>
+          <tr style="text-align: center;">
+            <td>1.0</td>
+            <td>0.728</td>
+            <td>0.702</td>
+            <td>0.687</td>
+            <td>0.718</td>
+            <td>0.683</td>
+          </tr>
+          <tr style="text-align: center;">
+            <td rowspan="2" style="text-align: center; vertical-align: middle;"> FedProx</td>
+            <td class="light-grey-bg">0.1</td>
+            <td class="light-grey-bg"><b>0.743</b></td>
+            <td class="light-grey-bg"><b>0.729</b></td>
+            <td class="light-grey-bg"><b>0.722</b></td>
+            <td class="light-grey-bg"><b>0.735</b></td>
+            <td class="light-grey-bg"><b>0.718</b></td>
+          </tr>
+          <tr style="text-align: center;">
+            <td>1.0</td>
+            <td>0.721</td>
+            <td>0.701</td>
+            <td>0.687</td>
+            <td>0.718</td>
+            <td>0.683</td>
+          </tr>
+          <!-- Cross Silo -->
+          <tr class="light-grey-bg" style="text-align: center;">
+            <td rowspan="4" style="text-align: center; vertical-align: middle;"> Cross-Silo</td>
+            <td rowspan="2" style="text-align: center; vertical-align: middle;"> FedAvg</td>
+            <td>0.1</td>
+            <td>0.763</td>
+            <td>0.759</td>
+            <td>0.750</td>
+            <td>0.752</td>
+            <td>0.749</td>
+          </tr>
+          <tr style="text-align: center;">
+            <td>1.0</td>
+            <td><b>0.784</b></td>
+            <td><b>0.773</b></td>
+            <td><b>0.770</b></td>
+            <td><b>0.776</b></td>
+            <td><b>0.762</b></td>
+          </tr>
+          <tr style="text-align: center;">
+            <td rowspan="2" style="text-align: center; vertical-align: middle;"> FedProx</td>
+            <td class="light-grey-bg">0.1</td>
+            <td class="light-grey-bg">0.744</td>
+            <td class="light-grey-bg">0.722</td>
+            <td class="light-grey-bg">0.729</td>
+            <td class="light-grey-bg">0.735</td>
+            <td class="light-grey-bg">0.719</td>
+          </tr>
+          <tr class="light-grey-border-bottom" style="text-align: center;">
+            <td>1.0</td>
+            <td><b>0.752</b></td>
+            <td><b>0.738</b></td>
+            <td><b>0.729</b></td>
+            <td><b>0.748</b></td>
+            <td><b>0.724</b></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    
+    <h4 class="title" style="margin-bottom: 10px">Results (T=200 and E=1)</h4>
+    <ul>
+      <li>More extensive and structed client datasets (cross-silo) lead to higher performance, otherwise effectiveness of local CL is restricted.</li>
+      <li>FedProx algorithm promotes consistent convergence across both cross-silo and cross-device scenarios.</li>
+      <li>The distributed semi-supervised CL component accelerates convergence, especially at the beginning of training.</li>
+      <li>RNN-based Methods take longer to converge </li>
+      <li>Overfitting:</li>
+      <ul>
+        <li>The distributed semi-supervised CL makes at transformer model more prone to overfitting than vanilla Transformers.</li>
+        <li>FedProx prevents overfitting in cross-silo setting.</li>
+        <li>Overfitting is less problematic in cross-device setting.</li>
+      </ul>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">References</h2>
+    <p>[1] C. of European Union, “Regulation (EU) 2024/1689 of the European
+Parliament and of the Council of 13 June 2024 laying down harmonised
+rules on artificial intelligence and amending Regulations (Artificial
+Intelligence Act),” Jun. 2024, legislative Body: CONSIL, EP.</p>
+<p>[2] C. of European Union, “Regulation (EU) 2016/679 of the European Parliament and of
+the Council of 27 April 2016 on the protection of natural persons with
+regard to the processing of personal data and on the free movement of
+such data, and repealing Directive 95/46/EC (General Data Protection
+Regulation),” 2016, doc ID: 32016R0679 Doc Sector: 3 Doc Type: R.</p>
+<p>[3] M. Forstenhäusler, D. Külzer, C. Anagnostopoulos, S. P. Parambath,
+and N. Weber, “STaRFormer: Semi-Supervised Task-Informed
+Representation Learning via Dynamic Attention-Based Regional
+Masking for Sequential Data,” Apr. 2025, arXiv:2504.10097 [cs].
+[Online]. Available: http://arxiv.org/abs/2504.10097</p>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <!--pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre-->
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <!--div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div-->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+        <p>This website was adopted from <a
+              href="https://nerfies.github.io/">Nerfies website</a>. and is licensed under a 
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to the <a
+              href="https://nerfies.github.io/">original page and source code</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
